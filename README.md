@@ -1,3 +1,8 @@
-# FYP-CheukYui
+# GENERATING SEMANTICALLY SIMILAR PERMUTATIONS OF QUESTIONS
 
-pip install -r requirements.txt to install the required modules
+
+
+Install the required modules using the following code
+```javascript
+pip install -r requirements.txt 
+```
