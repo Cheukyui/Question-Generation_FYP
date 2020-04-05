@@ -11,7 +11,7 @@ This repository provides a command line script written in Python for generating 
 This Question Generation (QG) system involves 2 approaches. The descriptions of each question generation approach are given below:
 
 - **Combination of machine translation applications question generator**. Given an input question, this question generator will generate permutations of questions by translating the input question utilising a combination of machine translation applications into Chinese language and translating the sentence back to English language.
-- **Permutation of translated Chinese sentence question generator**. Given an input question, this question generator will generate permutations of questions by permutation of the Chinese translated question and translating the different permutations back to English language. This python script will return an unique set of English questions with no duplicates. In addition to taking an English question as an input, there will be another python script that allows users to read a text file of English questions where users just have to input the name of the text file filled with English questions and returning a text file of generated questions to the user called: "generate.txt".
+- **Permutation of translated Chinese sentence question generator**. Given an input question, this question generator will generate permutations of questions by permutation of the Chinese translated question and translating the different permutations back to English language. This python script will return an unique set of English questions with no duplicates. In addition to taking an English question as an input, there will be another python script that allows users to read a text file of English questions where users just have to input the name of the text file containing English questions and returning a text file of generated questions to the user called: "generate.txt".
 
 ## Installation
 ### Step 1: Clone the repository
@@ -34,7 +34,25 @@ pip install -r requirements.txt
 
 ## Usage
 ### Combination of machine translation applications question generator
+Run the python script
+```
+python combi_mta.py
+```
 
+After running the above code, the user will be prompted to input an English question like below:
+```
+Please input an English question:
+```
+
+Sample Input:
+```
+How is the birth order determined
+```
+
+Sample Output:
+```
+
+```
 
 ### Permutation of translated Chinese sentence question generator
 #### Input: Single English Question
@@ -63,9 +81,9 @@ how to determine birth order
 how is it determine birth order
 ```
 
-Another function within this python script is available if the user wants to extract the most dissimilar generated questions compared to the input English question. This function can be activated by calling the function like this below:
+Another function within this python script is available if the user wants to extract the most dissimilar generated questions compared to the input English question. This function can be activated by calling the function like this below where **_eng_qns_** refers to the original input English question, **_unique_list(seg_sentence)_** refers to the unique list of generated questions and **_k_** refers to the top 'k' questions with the most sentence difference with the original input question:
 ```
-similarity_list(eng_qns, unique_list(seg_sentence))
+similarity_list(eng_qns, unique_list(seg_sentence), k)
 ```
 
 #### Input: Text File of English Questions
