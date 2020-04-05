@@ -2,6 +2,9 @@ import jieba
 import itertools as it
 import translators as ts
 
+print("Please input name of text file:")
+text_file = input()
+
 def permutechisen(s, char):
     if not s:
         return [s]
@@ -15,7 +18,7 @@ def trans(list1):
     for i in range(len(list1)):
         chi_eng_google = ts.google(list1[i], 'zh-CN', 'en')
         mylist.append(chi_eng_google)
-    result = str("/ ".join(mylist)) + '\n'
+    result = str(" ".join(mylist)) + '\n'
     return result
 
 
@@ -24,7 +27,7 @@ def permutechieng(seg_list):
         fa.write(trans(permutechisen(seg_list, ' ')[i].split()))
 
 
-fr = open('question_bank.txt', 'r')
+fr = open(text_file, 'r')
 
 fa = open('generate.txt', 'a')
 

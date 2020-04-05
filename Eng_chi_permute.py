@@ -23,6 +23,7 @@ def permutechisen(s, char):
     return [''.join(it.chain.from_iterable(x)) for x in zipped]
 
 
+# Generate the segmentation and display it
 print(permutechisen(seg_sentence, '/ '))
 
 
@@ -39,6 +40,9 @@ def permutechieng(seg_list):
     for i in range(len(permutechisen(seg_list, ' '))):
         print(permutechisen(seg_list, '/ ')[i])
         trans(permutechisen(seg_list, ' ')[i].split())
+
+
+# print(permutechieng(seg_sentence))
 
 
 def trans_join(list1):
@@ -63,6 +67,21 @@ def permutechieng_list(seg_list):
 # print(permutechieng_list(seg_sentence))
 
 
+# Return a unique list of translated sentences with no duplicates
+def unique_list(seg_list):
+    whole_list = permutechieng_list(seg_list)
+    new_list = []
+    for i in range(len(whole_list)):
+        new_list.append(whole_list[i].lower())
+    uni_list = list(set(new_list))
+    # return uni_list
+    print(*uni_list, sep = "\n")
+
+
+# print(unique_list(seg_sentence))
+unique_list(seg_sentence)
+
+
 def get_vectors(*strs):
     text = [t for t in strs]
     vectorizer = CountVectorizer(text)
@@ -76,18 +95,18 @@ def get_cosine_sim(*strs):
 
 
 # prints the top 'k' sentences with the most sentence difference with the original sentence
-def similarity_list(string1, list1):
+def similarity_list(string1, list1, k):
     mylist = []
     for i in range(len(list1)):
         arr = get_cosine_sim(string1, list1[i])
         mylist.append(np.amin(arr))
     arr = np.array(mylist)
-    k = 4  # the top k sentences
+    # k from the input parameters refer to the top k sentences
     idx = np.argpartition(arr, k)
     for j in range(k):
         print(list1[idx[j]])
 
 
-similarity_list(eng_qns, permutechieng_list(seg_sentence))
+# similarity_list(eng_qns, unique_list(seg_sentence))
 
-# print(permutechieng(seg_sentence))
+
