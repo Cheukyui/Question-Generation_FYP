@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ### Combination of machine translation applications question generator
 Run the python script
 ```
-python combi_mta.py
+python combination_mta.py
 ```
 
 After running the above code, the user will be prompted to input an English question like below:
@@ -51,7 +51,36 @@ How is the birth order determined
 
 Sample Output:
 ```
+How to determine the order of birth
+How to determine the order of birth
+How do you determine birth order
+How to determine the birth order
+How to determine the order of birth
+How to determine the order of birth
+How do you determine birth order
+How to determine the birth order
+How to determine the order of birth
+How to determine the order of birth
+How do you determine birth order
+How to determine the birth order
+How is the birth order determined?
+How is the birth order determined?
+How is birth order determined?
+How is the birth order determined?
+```
 
+Another function within this python script is available if the user wants to extract the unique list of questions generated from the combination of machine translation applications where **_english_qns_** refers to the input English question:
+```
+uni_combination_mta(english_qns)
+```
+
+Sample Output:
+```
+how do you determine birth order
+how to determine the birth order
+how to determine the order of birth
+how is the birth order determined
+how is birth order determined
 ```
 
 ### Permutation of translated Chinese sentence question generator
