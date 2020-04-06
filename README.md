@@ -158,3 +158,7 @@ how is it Confirm birth order
 how is it determine Birth order
 how is it determine Born order
 ```
+
+## Author
+**Leung Cheuk Yui** for AY2019/2020 FYP 
+Nanyang Technological University, School of Computer Science and Engineering
