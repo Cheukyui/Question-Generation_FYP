@@ -4,3 +4,4 @@ translators==4.4.0
 jieba==0.42.1
 googletrans==2.4.0
 sklearn==0.0
+translate==3.5.0

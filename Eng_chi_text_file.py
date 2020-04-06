@@ -5,6 +5,7 @@ import translators as ts
 print("Please input name of text file:")
 text_file = input()
 
+
 def permutechisen(s, char):
     if not s:
         return [s]
@@ -38,4 +39,3 @@ for line in fr:
     permutechieng(seg_sentence)
     fa.write('\n')
     fa.write('\n')
-

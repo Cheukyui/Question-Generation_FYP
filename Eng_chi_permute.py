@@ -107,6 +107,7 @@ def similarity_list(string1, list1, k):
         print(list1[idx[j]])
 
 
-# similarity_list(eng_qns, unique_list(seg_sentence))
+# An example value of 3 is used for k in the following function:
+# similarity_list(eng_qns, unique_list(seg_sentence), 3)
 
 
