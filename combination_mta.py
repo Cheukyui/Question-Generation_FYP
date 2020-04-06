@@ -92,7 +92,7 @@ def tencent_block(eng_qns):
 
 # Return whole list of generated questions from the combination of machine translation applications
 def combination_mta(eng_qns):
-    # Connect all 4 blocks
+    # Combine all 4 blocks
     whole_list = google_block(eng_qns) + bing_block(eng_qns) + youdao_block(eng_qns) + tencent_block(eng_qns)
     # return whole_list
     print(*whole_list, sep="\n")
@@ -114,7 +114,7 @@ def remove_punctuation(string):
 
 # Returns a unique list of generated questions
 def uni_combination_mta(eng_qns):
-    # Connect all 4 blocks
+    # Combine all 4 blocks
     whole_list = google_block(eng_qns) + bing_block(eng_qns) + youdao_block(eng_qns) + tencent_block(eng_qns)
     # Remove punctuations in all strings
     no_punc_list = []
