@@ -163,3 +163,4 @@ how is it determine Born order
 **Leung Cheuk Yui** for AY2019/2020 FYP
 
 Nanyang Technological University, School of Computer Science and Engineering
+For the video of the project description, please watch it on YouTube with this [link] (https://www.youtube.com/watch?v=OSq9GCixmDA)
